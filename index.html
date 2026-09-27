@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sehrish Ali ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#08030a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Floating hearts */
+.heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:20px;
+    animation:float 8s linear infinite;
+    opacity:.7;
+    z-index:1;
+    pointer-events:none;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+    15%{opacity:.8;}
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* Hero */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
+    background:
+    radial-gradient(circle at top,#7a164d 0,#24091d 35%,#08030a 75%);
+}
+
+.hero-content{
+    max-width:800px;
+    position:relative;
+    z-index:2;
+}
+
+.small{
+    color:#ff9fc9;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(45px,12vw,100px);
+    line-height:1;
+    background:linear-gradient(90deg,#fff,#ff9dcc,#fff);
+    -webkit-background-clip:text;
+    color:transparent;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#ffdbea;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.start-btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 30px;
+    border-radius:50px;
+    background:#ff3f91;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 0 30px #ff3f9166;
+    transition:.3s;
+}
+
+.start-btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 45px #ff3f91aa;
+}
+
+/* Sections */
+section{
+    padding:90px 20px;
+    position:relative;
+}
+
+.container{
+    max-width:950px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:18px;
+    color:#ffb4d5;
+}
+
+.section-sub{
+    text-align:center;
+    color:#d9b7c8;
+    margin-bottom:45px;
+}
+
+/* Love letter */
+.card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,154,201,.2);
+    border-radius:25px;
+    padding:35px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+
+.card p{
+    color:#f6dce8;
+    line-height:1.9;
+    font-size:17px;
+    margin-bottom:15px;
+}
+
+.signature{
+    text-align:right;
+    color:#ff91bd;
+    font-size:20px;
+    margin-top:25px;
+}
+
+/* Reasons */
+.reasons{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+}
+
+.reason{
+    padding:25px;
+    background:linear-gradient(145deg,#1d0b18,#10050d);
+    border:1px solid #ff6fa933;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.reason:hover{
+    transform:translateY(-8px);
+    border-color:#ff70ad88;
+}
+
+.reason .icon{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+.reason h3{
+    margin-bottom:8px;
+    color:#ffafd0;
+}
+
+.reason p{
+    color:#d6bdc9;
+    line-height:1.6;
+}
+
+/* Poetry */
+.poetry{
+    text-align:center;
+    padding:40px 25px;
+}
+
+.poetry p{
+    font-size:23px;
+    line-height:2;
+    color:#ffe3ee;
+}
+
+.poetry .name{
+    color:#ff75ad;
+    font-weight:bold;
+}
+
+/* Gallery */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+}
+
+.photo{
+    height:260px;
+    border-radius:22px;
+    border:1px dashed #ff79ae88;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#d9b5c6;
+    background:linear-gradient(145deg,#1d0a17,#0e040b);
+    padding:20px;
+}
+
+.photo span{
+    font-size:40px;
+    display:block;
+    margin-bottom:10px;
+}
+
+/* Proposal */
+.proposal{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+    radial-gradient(circle,#581237 0,#180611 45%,#08030a 80%);
+}
+
+.proposal-box{
+    max-width:750px;
+}
+
+.proposal-heart{
+    font-size:80px;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.15);}
+}
+
+.proposal h2{
+    font-size:clamp(35px,8vw,70px);
+    margin:20px 0;
+    color:#fff;
+}
+
+.proposal h2 span{
+    color:#ff76ae;
+}
+
+.proposal p{
+    color:#e9cbd8;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:35px;
+}
+
+.btn{
+    border:none;
+    padding:16px 30px;
+    border-radius:50px;
+    font-size:16px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.yes{
+    background:#ff3f91;
+    color:white;
+    box-shadow:0 0 30px #ff3f9166;
+}
+
+.yes:hover{
+    transform:scale(1.1);
+}
+
+.time{
+    background:#ffffff12;
+    color:#ffd6e7;
+    border:1px solid #ffffff22;
+}
+
+.time:hover{
+    background:#ffffff20;
+}
+
+/* Response */
+.response{
+    display:none;
+    margin-top:35px;
+    padding:30px;
+    border-radius:25px;
+    background:#ff3f9112;
+    border:1px solid #ff70ad66;
+}
+
+.response h3{
+    font-size:30px;
+    color:#ff9ac5;
+    margin-bottom:12px;
+}
+
+.response p{
+    font-size:17px;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:35px 20px;
+    color:#9e788c;
+    background:#050205;
+}
+
+footer strong{
+    color:#ff86b6;
+}
+
+/* Confetti */
+.confetti{
+    position:fixed;
+    top:-20px;
+    width:9px;
+    height:14px;
+    z-index:9999;
+    animation:fall 3s linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+@media(max-width:600px){
+    section{
+        padding:70px 16px;
+    }
+
+    .card{
+        padding:25px 20px;
+    }
+
+    .poetry p{
+        font-size:19px;
+    }
+
+    .photo{
+        height:220px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+<div class="heart" style="left:8%;animation-delay:0s;">❤️</div>
+<div class="heart" style="left:20%;animation-delay:2s;">💗</div>
+<div class="heart" style="left:35%;animation-delay:4s;">💕</div>
+<div class="heart" style="left:52%;animation-delay:1s;">💖</div>
+<div class="heart" style="left:70%;animation-delay:5s;">❤️</div>
+<div class="heart" style="left:88%;animation-delay:3s;">💗</div>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-content">
+
+        <div class="small">A little message from the heart</div>
+
+        <h1>Sehrish Ali ❤️</h1>
+
+        <p>
+            Kuch baatein lafzon mein kehna mushkil hota hai...
+            isliye aaj dil ki baat ek choti si website mein keh raha hoon.
+        </p>
+
+        <a href="#letter" class="start-btn">
+            Open My Heart 💌
+        </a>
+
+    </div>
+</header>
+
+
+<!-- LOVE LETTER -->
+<section id="letter">
+    <div class="container">
+
+        <h2 class="section-title">Dear Sehrish ❤️</h2>
+
+        <p class="section-sub">
+            Ye message sirf tumhare liye hai.
+        </p>
+
+        <div class="card">
+
+            <p>
+                Sehrish, pata nahi kab tum meri zindagi mein itni special
+                ban gayi. Bas itna pata hai ke tumhara naam dekh kar
+                mere chehre par smile aa jati hai.
+            </p>
+
+            <p>
+                Main perfect nahi hoon, aur na hi mere paas duniya ke
+                sabse khoobsurat alfaaz hain. Lekin jo feelings hain,
+                woh bilkul dil se hain.
+            </p>
+
+            <p>
+                Tumhari smile, tumhari baatein aur tumhara hona mere liye
+                bohat special hai. Main chahta hoon ke meri zindagi ke
+                khoobsurat moments mein tumhara bhi ek khoobsurat hissa ho.
+            </p>
+
+            <p>
+                Isliye aaj bina kisi pressure ke, sirf apne dil ki baat
+                tumhare saamne rakh raha hoon...
+            </p>
+
+            <div class="signature">
+                With love,<br>
+                <strong>Ali ❤️</strong>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- POETRY -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">For Sehrish 🌹</h2>
+
+        <div class="card poetry">
+
+            <p>
+                Tera naam aaye to dil muskura deta hai,<br>
+                Teri ek smile sab kuch bhula deti hai,<br>
+                Pata nahi kya rishta hai tumse,<br>
+                Magar dil har baar tumhe hi chahta hai. ❤️
+            </p>
+
+            <br>
+
+            <p>
+                <span class="name">Sehrish</span>,<br>
+                tum sirf ek naam nahi,<br>
+                mere liye ek khoobsurat ehsaas ho. 💕
+            </p>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- REASONS -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Why You Are Special ❤️</h2>
+
+        <p class="section-sub">
+            Kuch choti choti wajahen...
+        </p>
+
+        <div class="reasons">
+
+            <div class="reason">
+                <div class="icon">😊</div>
+                <h3>Your Smile</h3>
+                <p>
+                    Tumhari smile mein ek alag hi magic hai.
+                </p>
+            </div>
+
+            <div class="reason">
+                <div class="icon">💗</div>
+                <h3>Your Heart</h3>
+                <p>
+                    Tumhari simplicity aur caring nature bohat special hai.
+                </p>
+            </div>
+
+            <div class="reason">
+                <div class="icon">✨</div>
+                <h3>Your Presence</h3>
+                <p>
+                    Tumhara hona hi kisi normal din ko special bana deta hai.
+                </p>
+            </div>
+
+            <div class="reason">
+                <div class="icon">🌹</div>
+                <h3>Just You</h3>
+                <p>
+                    Sabse badi wajah ye hai ke tum... bas tum ho.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- PHOTO SECTION -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Our Memories 📸</h2>
+
+        <p class="section-sub">
+            Yahan apni special photos add kar sakte ho.
+        </p>
+
+        <div class="gallery">
+
+            <div class="photo">
+                <div>
+                    <span>📷</span>
+                    <strong>Our Special Moment</strong>
+                    <br><br>
+                    Photo yahan add karo
+                </div>
+            </div>
+
+            <div class="photo">
+                <div>
+                    <span>💞</span>
+                    <strong>A Beautiful Memory</strong>
+                    <br><br>
+                    Photo yahan add karo
+                </div>
+            </div>
+
+            <div class="photo">
+                <div>
+                    <span>🌹</span>
+                    <strong>Forever Memory</strong>
+                    <br><br>
+                    Photo yahan add karo
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- PROPOSAL -->
+<section class="proposal" id="proposal">
+
+    <div class="proposal-box">
+
+        <div class="proposal-heart">❤️</div>
+
+        <h2>
+            Sehrish Ali,<br>
+            <span>Will You Be Mine?</span>
+        </h2>
+
+        <p>
+            Main tum par koi pressure nahi dalna chahta.
+            Bas apne dil ki baat tum tak pohanchana chahta hoon.
+            Agar tumhare dil mein bhi mere liye thodi si jagah hai,
+            to aaj mujhe apna jawab de dena. ❤️
+        </p>
+
+        <div class="buttons">
+
+            <button class="btn yes" onclick="sayYes()">
+                YES ❤️
+            </button>
+
+            <button class="btn time" onclick="needTime()">
+                I Need Some Time 💕
+            </button>
+
+        </div>
+
+        <div class="response" id="response"></div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    Made with ❤️ for <strong>Sehrish Ali</strong><br>
+    From <strong>Ali</strong>
+</footer>
+
+
+<script>
+
+/* YES BUTTON */
+function sayYes(){
+
+    const box = document.getElementById("response");
+
+    box.style.display = "block";
+
+    box.innerHTML = `
+        <h3>Thank You, Sehrish! ❤️</h3>
+        <p>
+            Tumhara YES mere liye bohat special hai. 💕<br>
+            Aaj ka din hamesha yaad rahega.
+        </p>
+    `;
+
+    createConfetti();
+
+    setTimeout(function(){
+        box.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+    },300);
+}
+
+
+/* TIME BUTTON */
+function needTime(){
+
+    const box = document.getElementById("response");
+
+    box.style.display = "block";
+
+    box.innerHTML = `
+        <h3>It's Okay 💗</h3>
+        <p>
+            Main tumhare decision ki respect karta hoon.
+            Tum jitna waqt chaho le sakti ho.
+            Bas khush rehna. 🌹
+        </p>
+    `;
+
+    box.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+}
+
+
+/* CONFETTI */
+function createConfetti(){
+
+    const symbols = ["❤️","💗","💕","✨","🌹"];
+
+    for(let i=0;i<80;i++){
+
+        const item = document.createElement("div");
+
+        item.className = "confetti";
+
+        item.innerHTML =
+            symbols[Math.floor(Math.random()*symbols.length)];
+
+        item.style.left =
+            Math.random()*100 + "vw";
+
+        item.style.animationDuration =
+            (2 + Math.random()*3) + "s";
+
+        item.style.fontSize =
+            (12 + Math.random()*18) + "px";
+
+        document.body.appendChild(item);
+
+        setTimeout(()=>{
+            item.remove();
+        },5000);
+    }
+}
+
+</script>
+
+</body>
+  </html>
